@@ -30,13 +30,7 @@ function App() {
         setPost(res.data); // get just the form data from the REST api
         console.log("success", post);
         // reset form if successful
-        setFormState({
-          name: "",
-          email: "",
-          terms: "",
-          positions: "",
-          motivation: "",
-        });
+        setFormState(initialForm);
       })
       .catch((err) => console.log(err.response));
   };
